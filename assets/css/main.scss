@@ -1,3 +1,9 @@
+body, article, p {
+    font-family: "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
+    font-variant-ligatures: common-ligatures; /* 开启德文字符的高级连字特性 */
+    text-rendering: optimizeLegibility;
+}
+
 $darkest-color: {{ .Site.Params.style.darkestColor | default "#242930" }};
 $dark-color: {{ .Site.Params.style.darkColor | default "#353b43" }};
 $light-color: {{ .Site.Params.style.lightColor | default "#afbac4" }};
