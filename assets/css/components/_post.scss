@@ -1,5 +1,6 @@
 .post-title {
-  color: $lightest-color;
+  /* 1. 把小說標題改成優雅的深炭灰色，保證清晰不刺眼 */
+  color: #1c1c1f !important; 
 }
 
 .post-meta > div {
@@ -31,10 +32,13 @@
     border-left: 0.4em solid rgba($primary-color, .8);
     margin: 1em 0em;
     padding: .5em 1em;
-    background: $darkest-color;
+    /* 2. 把卡夫卡名言引用塊的背景，從原本的死黑色改成稍深的複古紙張色 */
+    background: #eadeca !important; 
 
     p {
       margin: .5em 0;
+      /* 3. 確保引用塊內的文字也是舒服的深色 */
+      color: #2b2b2b !important; 
     }
   }
 
