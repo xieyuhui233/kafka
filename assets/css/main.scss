@@ -1,6 +1,10 @@
-body, article, p {
-    font-family: "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
-    font-variant-ligatures: common-ligatures; /* 开启德文字符的高级连字特性 */
+p, article, .post-content, body {
+    /* 中德双语无缝兼容的顶级文学字体链 */
+    font-family: "Garamond", "EB Garamond", "Baskerville", "Georgia", 
+                 "Songti SC", "STSong", "Hiragino Mincho ProN", 
+                 "Noto Serif CJK SC", "Source Han Serif SC", serif !important;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
     text-rendering: optimizeLegibility;
 }
 
