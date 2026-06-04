@@ -1,38 +1,29 @@
 /* ===================================================
-   1. 基础羊皮卷底色与西文（德、英、法、俄）首选排版
+   1. 终极多语种大一统强制衬线字体链（彻底解决黑体混排与韩文黑体问题）
    =================================================== */
-body, article, .post-content, .post-title, .post-meta {
-    font-family: "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
-    font-size: 19px !important;       
-    line-height: 1.95 !important;     
-    letter-spacing: 0.03em !important;
+p, article, .post-content, body, .post-title, .post-meta, span, h1, h2, h3, h4 {
+    font-family: 
+        /* 【第一优先级】强制激活韩文衬线体，防止其退回默认黑体 */
+        "Batang", "AppleMyungjo", "Gungsuh", 
+        /* 【第二优先级】强制激活纯正日文明朝体，防止被中文黑体污染 */
+        "Hiragino Mincho ProN", "YuMincho", "MS Mincho", 
+        /* 【第三优先级】完美的中文典雅宋体（支持简繁体） */
+        "Songti SC", "STSong", "Songti TC", "PMingLiU", 
+        /* 【第四优先级】西本文学活字印刷体 */
+        "Garamond", "EB Garamond", "Baskerville", "Georgia", 
+        /* 【全球云端开源衬线体终极强制兜底】 */
+        "Noto Serif CJK SC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Source Han Serif SC", serif !important;
+
+    /* 羊皮卷护眼挑高核心参数 */
+    font-size: 19px !important;       
+    line-height: 1.95 !important;     
+    letter-spacing: 0.04em !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background-color: #f4edd8 !important; 
-    color: #262629 !important;            
-}
 
-/* ===================================================
-   2. 严格多语种隔离机制（彻底解决中日韩混淆、字体不一问题）
-   =================================================== */
-:lang(zh), :lang(zh-CN), :lang(zh-HK), :lang(zh-TW) {
-    font-family: "Songti SC", "STSong", "Songti TC", "PMingLiU", "Noto Serif CJK SC", serif !important;
-    font-size: 18.5px !important;
-    line-height: 1.9 !important;   
-    letter-spacing: 0.05em !important; 
-}
-
-:lang(ja) {
-    font-family: "Hiragino Mincho ProN", "YuMincho", "MS Mincho", "Noto Serif CJK JP", serif !important;
-    font-size: 18px !important;
-    line-height: 2.0 !important;   
-    letter-spacing: 0.06em !important; 
-}
-
-:lang(ko) {
-    font-family: "Batang", "AppleMyungjo", "Noto Serif CJK KR", serif !important;
-    font-size: 18px !important;
-    line-height: 1.9 !important;
+    /* 羊皮卷经典温和配色 */
+    background-color: #f4edd8 !important; /* 羊皮卷黄色底色 */
+    color: #262629 !important;            /* 乌木深灰字，防刺眼 */
 }
 
 p {
@@ -41,10 +32,12 @@ p {
 }
 
 /* ===================================================
-   2. 核心組件排版（已完美融入羊皮卷墨水色）
+   2. 核心组件排版（已完美融合羊皮卷墨水色）
    =================================================== */
 .post-title {
-  color: #3d3123 !important; /* 羊皮卷古典深褐色標題 */
+  color: #3d3123 !important; /* 羊皮卷古典深褐色大标题 */
+  font-size: 1.6em !important;
+  font-weight: 700 !important;
 }
 
 .post-meta > div {
@@ -76,7 +69,7 @@ p {
     border-left: 0.4em solid rgba($primary-color, .8);
     margin: 1em 0em;
     padding: .5em 1em;
-    background: #eadeca !important; /* 稍微深一點的紙張引用塊背景 */
+    background: #eadeca !important; /* 稍微深一点的纸张引用块背景 */
 
     p {
       margin: .5em 0;
@@ -88,8 +81,10 @@ p {
     max-width: 100%;
   }
 }
-/* 终极双保险：无论如何，强制小说正文里的所有文字和段落都使用优雅的深乌木灰 */
-.post-content, .post-content p, .post-content h3, .post-content span {
-    color: #262629 !important;
-}
 
+/* 强行把小说内所有的小标题（含序号）颜色彻底校正 */
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    color: #3d3123 !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.6em !important;
+}
