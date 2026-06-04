@@ -88,3 +88,8 @@ p {
     max-width: 100%;
   }
 }
+/* 终极双保险：无论如何，强制小说正文里的所有文字和段落都使用优雅的深乌木灰 */
+.post-content, .post-content p, .post-content h3, .post-content span {
+    color: #262629 !important;
+}
+
