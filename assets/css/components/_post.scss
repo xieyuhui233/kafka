@@ -1,20 +1,38 @@
 /* ===================================================
-   1. 全語種多國字體兼容與羊皮卷護眼排版
+   1. 基础羊皮卷底色与西文（德、英、法、俄）首选排版
    =================================================== */
-p, article, .post-content, body, .post-title, .post-meta {
-    font-family: 
-        "Garamond", "EB Garamond", "Baskerville", "Georgia", 
-        "Songti SC", "STSong", "Songti TC", "PMingLiU",
-        "Hiragino Mincho ProN", "MS Mincho", "YuMincho",
-        "Batang", "AppleMyungjo", 
-        "Noto Serif CJK SC", "Source Han Serif SC", serif !important;
+body, article, .post-content, .post-title, .post-meta {
+    font-family: "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
     font-size: 19px !important;       
     line-height: 1.95 !important;     
     letter-spacing: 0.03em !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background-color: #f4edd8 !important; /* 羊皮卷黃色底色 */
-    color: #262629 !important;            /* 烏木深灰字，防刺眼 */
+    background-color: #f4edd8 !important; 
+    color: #262629 !important;            
+}
+
+/* ===================================================
+   2. 严格多语种隔离机制（彻底解决中日韩混淆、字体不一问题）
+   =================================================== */
+:lang(zh), :lang(zh-CN), :lang(zh-HK), :lang(zh-TW) {
+    font-family: "Songti SC", "STSong", "Songti TC", "PMingLiU", "Noto Serif CJK SC", serif !important;
+    font-size: 18.5px !important;
+    line-height: 1.9 !important;   
+    letter-spacing: 0.05em !important; 
+}
+
+:lang(ja) {
+    font-family: "Hiragino Mincho ProN", "YuMincho", "MS Mincho", "Noto Serif CJK JP", serif !important;
+    font-size: 18px !important;
+    line-height: 2.0 !important;   
+    letter-spacing: 0.06em !important; 
+}
+
+:lang(ko) {
+    font-family: "Batang", "AppleMyungjo", "Noto Serif CJK KR", serif !important;
+    font-size: 18px !important;
+    line-height: 1.9 !important;
 }
 
 p {
