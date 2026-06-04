@@ -1,6 +1,32 @@
+/* ===================================================
+   1. 全語種多國字體兼容與羊皮卷護眼排版
+   =================================================== */
+p, article, .post-content, body, .post-title, .post-meta {
+    font-family: 
+        "Garamond", "EB Garamond", "Baskerville", "Georgia", 
+        "Songti SC", "STSong", "Songti TC", "PMingLiU",
+        "Hiragino Mincho ProN", "MS Mincho", "YuMincho",
+        "Batang", "AppleMyungjo", 
+        "Noto Serif CJK SC", "Source Han Serif SC", serif !important;
+    font-size: 19px !important;       
+    line-height: 1.95 !important;     
+    letter-spacing: 0.03em !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f4edd8 !important; /* 羊皮卷黃色底色 */
+    color: #262629 !important;            /* 烏木深灰字，防刺眼 */
+}
+
+p {
+    margin-top: 0 !important;
+    margin-bottom: 1.45em !important;
+}
+
+/* ===================================================
+   2. 核心組件排版（已完美融入羊皮卷墨水色）
+   =================================================== */
 .post-title {
-  /* 1. 把小說標題改成優雅的深炭灰色，保證清晰不刺眼 */
-  color: #1c1c1f !important; 
+  color: #3d3123 !important; /* 羊皮卷古典深褐色標題 */
 }
 
 .post-meta > div {
@@ -32,13 +58,11 @@
     border-left: 0.4em solid rgba($primary-color, .8);
     margin: 1em 0em;
     padding: .5em 1em;
-    /* 2. 把卡夫卡名言引用塊的背景，從原本的死黑色改成稍深的複古紙張色 */
-    background: #eadeca !important; 
+    background: #eadeca !important; /* 稍微深一點的紙張引用塊背景 */
 
     p {
       margin: .5em 0;
-      /* 3. 確保引用塊內的文字也是舒服的深色 */
-      color: #2b2b2b !important; 
+      color: #3d3123 !important;
     }
   }
 
