@@ -1,8 +1,12 @@
+> **建站志 · 记忆的刻度**
+> 
+> *“目标虽有，却无路可循；我们所谓的路，无非是彷徨。” —— 弗兰兹·卡夫卡*
+> 
+> 始于六月四日之沉思与破土，成于六月五日之坚守与落子。以此双日，致敬荒诞世界里永不妥协的西西弗斯，让文字在羊皮卷上获得永恒。
 ---
 title: "Das Schloß (Full Text)"
 date: 2026-06-04
 ---
-
 1 Ankunft
 Es war spät abend als K. ankam. Das Dorf lag in tiefem Schnee. Vom Schloßberg war nichts zu sehn, Nebel und Finsternis umgaben ihn, auch nicht der schwächste Lichtschein deutete das große Schloß an. Lange stand K. auf der Holzbrü-cke die von der Landstraße zum Dorf führt und blickte in die scheinbare Leere empor
 Dann gieng er ein Nachtlager suchen; im Wirtshaus war man noch wach, der Wirt hatte zwar kein Zimmer zu vermieten, aber er wollte, von dem späten Gast äußerst überrascht und verwirrt, K. in der Wirtsstube auf einem Strohsack schlafen lassen, K. war damit einverstanden. Einige Bauern saßen noch beim Bier aber er wollte sich mit niemandem unterhalten, holte selbst den Strohsack vom Dachboden und legte sich in der Nähe des Ofens hin. Warm war es, die Bauern waren still, ein wenig prüfte er sie noch mit den müden Augen, dann schlief er ein
