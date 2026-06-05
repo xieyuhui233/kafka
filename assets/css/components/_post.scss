@@ -1,31 +1,32 @@
-/* ===================================================
-   1. 终极多语种大一统强制衬线字体链（彻底解决黑体混排与韩文黑体问题）
-   =================================================== */
-$primary-color: #8c6d42; // 补上缺失主色变量，匹配羊皮卷棕色调
+$primary-color: #8c6d42;
 
-p, article, .post-content, body, .post-title, .post-meta, span, h1, h2, h3, h4 {
+/* 正文全局：CJK字体优先级置顶，从韩文→日文→中文→西文 */
+p, article, .post-content, .post-title, .post-meta, span, h1, h2, h3, h4 {
     font-family:
-        /* 【第一优先级】强制激活韩文衬线体，防止其退回默认黑体 */
+        /* 韩文衬线 */
         "Batang", "AppleMyungjo", "Gungsuh",
-        /* 【第二优先级】强制激活纯正日文明朝体，防止被中文黑体污染 */
+        /* 日文明朝体 */
         "Hiragino Mincho ProN", "YuMincho", "MS Mincho",
-        /* 【第三优先级】完美的中文典雅宋体（支持简繁体） */
+        /* 中文宋体（优先系统宋体） */
         "Songti SC", "STSong", "Songti TC", "PMingLiU",
-        /* 【第四优先级】西本文学活字印刷体 */
-        "Garamond", "EB Garamond", "Baskerville", "Georgia",
-        /* 【全球云端开源衬线体终极强制兜底】 */
-        "Noto Serif CJK SC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Source Han Serif SC", serif !important;
+        /* 开源兜底宋体，强制全平台生效 */
+        "Noto Serif CJK SC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Source Han Serif SC",
+        /* 西文衬线放最后！！不能前置 */
+        "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
 
-    /* 羊皮卷护眼挑高核心参数 */
     font-size: 19px !important;
     line-height: 1.95 !important;
     letter-spacing: 0.04em !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 
-    /* 羊皮卷经典温和配色 */
-    background-color: #f4edd8 !important; /* 羊皮卷黄色底色 */
-    color: #262629 !important;            /* 乌木深灰字，防刺眼 */
+    background-color: #f4edd8 !important;
+    color: #262629 !important;
+}
+
+/* 【关键修复】侧边栏黑色区域强制继承宋体，之前侧边独立样式丢了字体配置，全是黑体 */
+.sidebar, aside, .sidebar * {
+    font-family: inherit !important;
 }
 
 p {
@@ -33,11 +34,8 @@ p {
     margin-bottom: 1.45em !important;
 }
 
-/* ===================================================
-   2. 核心组件排版（已完美融合羊皮卷墨水色）
-   =================================================== */
 .post-title {
-  color: #3d3123 !important; /* 羊皮卷古典深褐色大标题 */
+  color: #3d3123 !important;
   font-size: 1.6em !important;
   font-weight: 700 !important;
 }
@@ -48,7 +46,6 @@ p {
   flex-wrap: wrap;
   gap: 0.2em;
   font-size: 0.8em;
-
   > .icon {
     margin-right: 0.4em;
   }
@@ -59,34 +56,43 @@ p {
   .highlight {
     margin: 1em 0;
   }
-
   & > pre,
   .highlight > pre,
   .highlight > div {
     border-left: 0.4em solid rgba($primary-color, .8);
     padding: 1em 1em;
   }
-
   blockquote {
     border-left: 0.4em solid rgba($primary-color, .8);
     margin: 1em 0em;
     padding: .5em 1em;
-    background: #eadeca !important; /* 稍微深一点的纸张引用块背景 */
-
+    background: #eadeca !important;
     p {
       margin: .5em 0;
       color: #3d3123 !important;
     }
   }
-
   img {
     max-width: 100%;
   }
 }
 
-/* 强行把小说内所有的小标题（含序号）颜色彻底校正 */
 .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
     color: #3d3123 !important;
     margin-top: 1.5em !important;
     margin-bottom: 0.6em !important;
+}
+
+/* 修正左右空白 */
+.single-post main {
+  max-width: min(920px, calc(100% - 32px)) !important;
+  margin: 0 auto !important;
+}
+.post-content {
+  padding: 0 6px !important;
+}
+@media(max-width:768px){
+  .single-post main{
+    max-width: calc(100% - 16px) !important;
+  }
 }
