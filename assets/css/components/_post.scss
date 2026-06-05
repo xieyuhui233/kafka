@@ -1,22 +1,24 @@
 /* ===================================================
    1. 终极多语种大一统强制衬线字体链（彻底解决黑体混排与韩文黑体问题）
    =================================================== */
+$primary-color: #8c6d42; // 补上缺失主色变量，匹配羊皮卷棕色调
+
 p, article, .post-content, body, .post-title, .post-meta, span, h1, h2, h3, h4 {
-    font-family: 
+    font-family:
         /* 【第一优先级】强制激活韩文衬线体，防止其退回默认黑体 */
-        "Batang", "AppleMyungjo", "Gungsuh", 
+        "Batang", "AppleMyungjo", "Gungsuh",
         /* 【第二优先级】强制激活纯正日文明朝体，防止被中文黑体污染 */
-        "Hiragino Mincho ProN", "YuMincho", "MS Mincho", 
+        "Hiragino Mincho ProN", "YuMincho", "MS Mincho",
         /* 【第三优先级】完美的中文典雅宋体（支持简繁体） */
-        "Songti SC", "STSong", "Songti TC", "PMingLiU", 
+        "Songti SC", "STSong", "Songti TC", "PMingLiU",
         /* 【第四优先级】西本文学活字印刷体 */
-        "Garamond", "EB Garamond", "Baskerville", "Georgia", 
+        "Garamond", "EB Garamond", "Baskerville", "Georgia",
         /* 【全球云端开源衬线体终极强制兜底】 */
         "Noto Serif CJK SC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Source Han Serif SC", serif !important;
 
     /* 羊皮卷护眼挑高核心参数 */
-    font-size: 19px !important;       
-    line-height: 1.95 !important;     
+    font-size: 19px !important;
+    line-height: 1.95 !important;
     letter-spacing: 0.04em !important;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
