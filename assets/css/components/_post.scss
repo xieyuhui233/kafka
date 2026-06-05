@@ -1,17 +1,11 @@
 $primary-color: #8c6d42;
 
-/* 正文全局：CJK字体优先级置顶，从韩文→日文→中文→西文 */
-p, article, .post-content, .post-title, .post-meta, span, h1, h2, h3, h4 {
+p, article, .post-content, body, .post-title, .post-meta, span, h1, h2, h3, h4 {
     font-family:
-        /* 韩文衬线 */
         "Batang", "AppleMyungjo", "Gungsuh",
-        /* 日文明朝体 */
         "Hiragino Mincho ProN", "YuMincho", "MS Mincho",
-        /* 中文宋体（优先系统宋体） */
         "Songti SC", "STSong", "Songti TC", "PMingLiU",
-        /* 开源兜底宋体，强制全平台生效 */
         "Noto Serif CJK SC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Source Han Serif SC",
-        /* 西文衬线放最后！！不能前置 */
         "Garamond", "EB Garamond", "Baskerville", "Georgia", serif !important;
 
     font-size: 19px !important;
@@ -24,7 +18,6 @@ p, article, .post-content, .post-title, .post-meta, span, h1, h2, h3, h4 {
     color: #262629 !important;
 }
 
-/* 【关键修复】侧边栏黑色区域强制继承宋体，之前侧边独立样式丢了字体配置，全是黑体 */
 .sidebar, aside, .sidebar * {
     font-family: inherit !important;
 }
@@ -46,6 +39,7 @@ p {
   flex-wrap: wrap;
   gap: 0.2em;
   font-size: 0.8em;
+
   > .icon {
     margin-right: 0.4em;
   }
@@ -56,22 +50,26 @@ p {
   .highlight {
     margin: 1em 0;
   }
+
   & > pre,
   .highlight > pre,
   .highlight > div {
     border-left: 0.4em solid rgba($primary-color, .8);
     padding: 1em 1em;
   }
+
   blockquote {
     border-left: 0.4em solid rgba($primary-color, .8);
     margin: 1em 0em;
     padding: .5em 1em;
     background: #eadeca !important;
+
     p {
       margin: .5em 0;
       color: #3d3123 !important;
     }
   }
+
   img {
     max-width: 100%;
   }
@@ -83,7 +81,6 @@ p {
     margin-bottom: 0.6em !important;
 }
 
-/* 修正左右空白 */
 .single-post main {
   max-width: min(920px, calc(100% - 32px)) !important;
   margin: 0 auto !important;
