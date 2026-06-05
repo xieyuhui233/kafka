@@ -81,15 +81,18 @@ p {
     margin-bottom: 0.6em !important;
 }
 
+
 .single-post main {
-  max-width: min(920px, calc(100% - 32px)) !important;
+  max-width: 920px !important;
+  width: calc(100% - 32px) !important;
   margin: 0 auto !important;
 }
 .post-content {
   padding: 0 6px !important;
 }
-@media(max-width:768px){
+@media (max-width:768px){
   .single-post main{
-    max-width: calc(100% - 16px) !important;
+    max-width: unset !important;
+    width: calc(100% - 16px) !important;
   }
 }
