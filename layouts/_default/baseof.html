@@ -13,11 +13,6 @@
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
     {{ end }}
-
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }}
-
   </head>
   <body>
     <header class="app-header">
@@ -49,5 +44,10 @@
         {{ .Content }}
       {{ end }}
     </main>
+
+    <!-- 萌ICP备案链接 -->
+    <footer style="text-align: center; padding: 20px 10px; font-size: 15px; margin-top: 30px; border-top: 1px solid #eee;">
+      <a href="https://icp.gov.moe/?keyword=20261924" target="_blank" rel="noopener">萌ICP备20261924号</a>
+    </footer>
   </body>
 </html>
